@@ -13,11 +13,17 @@ void setup() {
 }
 
 void draw() {
-  background(230,240,255);
-  image(mol1,0,height - 230,100,230);
-  image(mol2,width-100,height-230,100,230);
-  
-
+  background(230, 240, 255);
+  image(mol1, 0, height - 230, 100, 230);
+  image(mol2, width-100, height-230, 100, 230);
+ 
+  textAlign(CENTER);
+  fill(0);
+  String score1 = "TEST1";
+  String score2 = "TEST2";
+  textSize(32); 
+  text(score1, width/2-width/3, 100);
+  text(score2, width/2+width/3, 100);
 
 
   s.render();
