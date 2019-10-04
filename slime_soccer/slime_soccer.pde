@@ -3,7 +3,7 @@ ball b;
 slime s;
 
 void setup() {
-  size(1400, 800);
+  size(1600, 900);
   b = new ball();
   s = new slime();
 }
