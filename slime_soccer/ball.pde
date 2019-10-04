@@ -37,7 +37,7 @@ class ball {
       x.y = 0 + r;
       v.y = -v.y;
     }
-    if (x.x + r <= width-1) {
+    if (x.x + r >= width) {
       x.x = width - r;
       v.x = -v.x;
     }
