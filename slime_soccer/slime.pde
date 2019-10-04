@@ -13,16 +13,12 @@ class slime {
   }
 
   void render() {
-    noStroke();
-    fill(0, 255, 0);
-    ellipse(x.x, x.y, 2*r, 2*r);
-    fill(255);
-    rect(x.x-r, x.y, 2*r, r);
+    arc(x.x, x.y, 2*r, 2*r, PI, TWO_PI, CHORD);
   }
 
   void update() {
     v.y += g;
-    
+
     if (moveLeft) {
       v.x += -8;
     }
