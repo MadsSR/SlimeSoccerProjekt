@@ -45,6 +45,7 @@ class ball {
       x.x = 0 + r;
       v.x = -v.x;
     }
+    
   }
   void bounce(slime s) {
     PVector n = PVector.sub(x, s.x);
