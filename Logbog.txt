@@ -1,0 +1,2 @@
+Første time, vi starter med Sprint 1.
+De første fire punkter var nemme, men der vi skulle få bolden til at hoppe fra kanterne af canvas faldt vi lidt i problemer, men vi fandt hurtig frem til løsningen.
