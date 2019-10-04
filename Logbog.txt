@@ -1,2 +1,15 @@
-Første time, vi starter med Sprint 1.
+﻿Første time, vi starter med Sprint 1.
 De første fire punkter var nemme, men der vi skulle få bolden til at hoppe fra kanterne af canvas faldt vi lidt i problemer, men vi fandt hurtig frem til løsningen.
+
+Sprint 1
+Jeppe Hjorth laver punkt 1
+Mads R laver punkt 2
+Jens laver punkt 3
+Mads G laver punkt 4
+Mads R laver punkt 5
+
+Sprint 2
+Mads R laver punkt 1
+Jeppe H laver punkt 2
+Jens Laver punkt 3
+Mads G laver punkt 4
