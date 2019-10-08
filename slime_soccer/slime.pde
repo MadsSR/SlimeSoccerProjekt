@@ -13,15 +13,14 @@ class slime {
   }
 
   void render() {
-    noStroke();
-    fill(0, 255, 0);
-    ellipse(x.x, x.y, 2*r, 2*r);
-    fill(255);
+    fill(0,255,0);
+    arc(x.x, x.y, 2*r, 2*r, PI, TWO_PI, CHORD);
+        fill(255);
     ellipse(x.x+30, x.y-40, 20, 20);
-    fill(0);
+      fill(0);
     ellipse(x.x+35, x.y-45, 10, 10);
-    fill(255);
-    rect(x.x-r, x.y, 2*r, r);
+
+
   }
 
   void update() {

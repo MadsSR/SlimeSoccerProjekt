@@ -1,10 +1,8 @@
-<<<<<<< Updated upstream
 float g = 0.6;
-=======
-float g = 0.2;
+
 PImage mol1;
 PImage mol2;
->>>>>>> Stashed changes
+
 ball b;
 slime s;
 
@@ -16,12 +14,9 @@ void setup() {
   size(1600, 900);
   b = new ball();
   s = new slime();
-<<<<<<< Updated upstream
+
 }
 
-void draw() {
-  background(255);
-=======
   mol1 = loadImage("Goal1.png");
   mol2 = loadImage("Goal2.png");
 
@@ -34,9 +29,22 @@ void draw() {
   image(mol1, 0, height - 230, 100, 230);
   image(mol2, width-100, height-230, 100, 230);
 
+}
+
+void draw() {
+  background(230, 240, 255);
+  image(mol1, 0, height - 230, 100, 230);
+  image(mol2, width-100, height-230, 100, 230);
+ 
+  textAlign(CENTER);
+  fill(0);
+  String score1 = "TEST1";
+  String score2 = "TEST2";
+  textSize(32); 
+  text(score1, width/2-width/3, 100);
+  text(score2, width/2+width/3, 100);
 
 
->>>>>>> Stashed changes
 
   s.render();
   b.render();

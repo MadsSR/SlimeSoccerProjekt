@@ -68,13 +68,11 @@ class ball {
       x.x = 0 + r;
       v.x = -v.x;
     }
-<<<<<<< Updated upstream
-=======
 
     if (x.x <= 100 && x.y +r == height-230) {
       v.y = -v.y;
     }
->>>>>>> Stashed changes
+
   }
   void bounce(slime s) {
     PVector n = PVector.sub(x, s.x);
