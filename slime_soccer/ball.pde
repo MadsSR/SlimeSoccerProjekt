@@ -12,6 +12,29 @@ class ball {
     noStroke();
     fill(255, 0, 0);
     ellipse(x.x, x.y, 2*r, 2*r);
+    
+      //SCORE
+
+    if (x.x <= 100-r && x.y > height-230) {
+  score1 += 1;
+  x.x = width/2;
+  x.y = 400;
+  v.x = 0;
+  v.y = 0;
+  }
+      if (x.x >= width-100+r && x.y + r > height-230) {
+  score2 += 1;
+  x.x = width/2;
+  x.y = 400;
+  v.x = 0;
+  v.y = 0;
+  }
+  textAlign(CENTER);
+  fill(0);
+  textSize(32); 
+  text(score1, width/2-width/3, 100);
+  text(score2, width/2+width/3, 100);
+
   }
 
   void update() {
@@ -45,6 +68,13 @@ class ball {
       x.x = 0 + r;
       v.x = -v.x;
     }
+<<<<<<< Updated upstream
+=======
+
+    if (x.x <= 100 && x.y +r == height-230) {
+      v.y = -v.y;
+    }
+>>>>>>> Stashed changes
   }
   void bounce(slime s) {
     PVector n = PVector.sub(x, s.x);
