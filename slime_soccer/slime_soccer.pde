@@ -24,12 +24,8 @@ void setup() {
 }
 
 
-
 void draw() {
   background(230, 240, 255);
-  image(mol1, 0, height - 230, 100, 230);
-  image(mol2, width-100, height-230, 100, 230);
-
 
   //SCORE
   textAlign(CENTER);
@@ -41,13 +37,14 @@ void draw() {
   text("PLAYER 1", width/2-width/3, 97);
   text("PLAYER 2", width/2+width/3, 97);
 
-
-
   s.render();
   b.render();
 
   s.update();
   b.update();
+
+  image(mol1, 0, height - 230, 100, 230);
+  image(mol2, width-100, height-230, 100, 230);
 }
 
 void keyPressed() {

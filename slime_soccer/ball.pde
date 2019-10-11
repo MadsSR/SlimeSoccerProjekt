@@ -16,14 +16,14 @@ class ball {
     //SCORE
 
     if (x.x <= 100-r && x.y > height-230) {
-      score1 += 1;
+      score2 += 1;
       x.x = width/2;
       x.y = 400;
       v.x = 0;
       v.y = 0;
     }
     if (x.x >= width-100+r && x.y + r > height-230) {
-      score2 += 1;
+      score1 += 1;
       x.x = width/2;
       x.y = 400;
       v.x = 0;
