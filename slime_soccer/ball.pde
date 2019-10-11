@@ -34,8 +34,8 @@ class ball {
   }
 
   void update() {
-    if (dist(x.x, x.y, s.x.x, s.x.y) < r + s.r) {
-      bounce(s);
+    if (dist(x.x, x.y, s1.x.x, s1.x.y) < r + s1.r) {
+      bounce(s1);
     } else {
       v.mult(0.99);
       v.y += g;
