@@ -5,6 +5,8 @@ class slime {
   float dist;
   int p1ex;
   int p1ey;
+  color sc = color(0,255,0);
+  
 
 
   slime() {
@@ -18,7 +20,7 @@ class slime {
 
   void render() {
     dist = 0;
-    fill(0, 255, 0);
+    fill(sc);
     arc(x.x, x.y, 2*r, 2*r, PI, TWO_PI, CHORD);
     fill(255);
     ellipse(x.x+30, x.y-40, 20, 20);
