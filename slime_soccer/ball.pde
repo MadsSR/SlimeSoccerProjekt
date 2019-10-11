@@ -19,6 +19,7 @@ class ball {
       score2 += 1;
       x.x = width/2;
       x.y = 400;
+      //      delay(1000);
       v.x = 0;
       v.y = 0;
     }
@@ -26,10 +27,10 @@ class ball {
       score1 += 1;
       x.x = width/2;
       x.y = 400;
+      //    delay(1000);
       v.x = 0;
       v.y = 0;
     }
-   
   }
 
   void update() {
