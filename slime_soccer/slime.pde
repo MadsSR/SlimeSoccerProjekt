@@ -3,6 +3,9 @@ class slime {
   float r;
   boolean jump, moveLeft, moveRight;
   float dist;
+  int p1ex;
+  int p1ey;
+
 
   slime() {
     r = 75;
@@ -14,13 +17,13 @@ class slime {
   }
 
   void render() {
-    dist = dist(x.x,x.y,b.x.x,b.x.y);
+    dist = 0;
     fill(0, 255, 0);
     arc(x.x, x.y, 2*r, 2*r, PI, TWO_PI, CHORD);
     fill(255);
     ellipse(x.x+30, x.y-40, 20, 20);
     fill(0);
-    ellipse(x.x+35-map(dist,width,10,0), x.y-45, 10, 10);
+    ellipse(x.x+30+p1ex+dist, x.y-50+(map(b.x.y, 0, height, 0, 10)), 10, 10);
   }
 
   void update() {
@@ -44,11 +47,31 @@ class slime {
       v.y = 0;
     }
     v.x =0;
-    
+
     if (x.x > width-r) {
       x.x = width-r;
     }
-    if (x.x < 0+r)
+    if (x.x < 0+r) {
       x.x = r;
+    }
+    if (x.x+r > b.x.x) {
+      p1ex = -5;
+      dist = 0;
+    }
+    if (x.x-r < b.x.x) {
+      p1ex = 5;
+      dist = 0;
+    }
+
+
+
+    if (x.x > b.x.x) {
+      dist = map(dist(b.x.x, b.x.x, x.x, x.x), width, 0, 5, 0);
+      dist = -dist;
+    }
+    if (x.x < b.x.x) {
+      dist = map(dist(b.x.x, b.x.x, x.x, x.x), width, 0, 5, 0);
+      dist =-dist;
+    }
   }
 }
