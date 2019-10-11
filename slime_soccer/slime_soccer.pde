@@ -8,6 +8,9 @@ slime s;
 
 int score1;
 int score2;
+int begin; 
+int duration;
+int time;
 
 
 void setup() {
@@ -21,6 +24,12 @@ void setup() {
 
   score1 = 0;
   score2 = 0;
+
+  textSize(50);
+  fill(0);
+
+  begin = millis();
+  time = duration = 6;
 }
 
 
@@ -45,6 +54,20 @@ void draw() {
 
   image(mol1, 0, height - 230, 100, 230);
   image(mol2, width-100, height-230, 100, 230);
+  
+  if (time > 0)  time = duration - (millis() - begin)/1000;
+  textAlign(CENTER);
+  text(time, 800, 100, 10);
+  
+  if (time == 0) frameRate(0); {
+  if (score1 < score2); {
+   textAlign(CENTER);
+   textSize(50);
+   fill(0);
+   text("Slime 1 vinder", width/2, 300);
+  }
+  }  
+  
 }
 
 void keyPressed() {
