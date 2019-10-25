@@ -4,17 +4,17 @@ PImage mol1;
 PImage mol2;
 
 ball b;
-slime s;
-
+slime s1;
+slime s2;
 int score1;
 int score2;
 
 
 void setup() {
-  size(1600, 900);
+  size(1300, 800);
   b = new ball();
-  s = new slime();
-
+  s1 = new slime();
+  s2=new slime();
 
   mol1 = loadImage("Goal1.png");
   mol2 = loadImage("Goal2.png");
@@ -37,10 +37,12 @@ void draw() {
   text("PLAYER 1", width/2-width/3, 97);
   text("PLAYER 2", width/2+width/3, 97);
 
-  s.render();
+  s1.render();
+  s2.render();
   b.render();
 
-  s.update();
+  s1.update();
+  s2.update();
   b.update();
 
   image(mol1, 0, height - 230, 100, 230);
@@ -49,21 +51,36 @@ void draw() {
 
 void keyPressed() {
   if (key == 'w') {
-    s.jump = true;
+    s1.jump = true;
   }
   if (key == 'a') {
-    s.moveLeft = true;
+    s1.moveLeft = true;
   }
   if (key == 'd') {
-    s.moveRight = true;
+    s1.moveRight = true;
+  }
+  if (keyCode==UP) {
+    s2.jump = true;
+  }
+  if (keyCode ==LEFT) {
+    s2.moveLeft = true;
+  }
+  if (keyCode ==RIGHT ) {
+    s2.moveRight = true;
   }
 }
 
 void keyReleased() {
   if (key == 'a') {
-    s.moveLeft = false;
+    s1.moveLeft = false;
   }
   if (key == 'd') {
-    s.moveRight = false;
+    s1.moveRight = false;
+  }
+  if (keyCode == LEFT) {
+    s2.moveLeft = false;
+  }
+  if (keyCode == RIGHT) {
+    s2.moveRight = false;
   }
 }
